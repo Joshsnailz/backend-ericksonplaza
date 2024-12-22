@@ -13,6 +13,12 @@ import { SessionProvider, signIn, signOut, useSession } from "next-auth/react";
 import LinearProgress from "@mui/material/LinearProgress";
 
 import theme from "../theme";
+import {
+  Category,
+  ProductionQuantityLimitsSharp,
+  SettingsInputComponent,
+  SupportAgent,
+} from "@mui/icons-material";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -37,6 +43,26 @@ const NAVIGATION: Navigation = [
     segment: "orders",
     title: "Orders",
     icon: <ShoppingCartIcon />,
+  },
+  {
+    segment: "settings",
+    title: "Settings",
+    icon: <SettingsInputComponent />,
+  },
+  {
+    segment: "suppliers",
+    title: "Suppliers",
+    icon: <SupportAgent />,
+  },
+  {
+    segment: "categories",
+    title: "Categories",
+    icon: <Category />,
+  },
+  {
+    segment: "products",
+    title: "Products",
+    icon: <ProductionQuantityLimitsSharp />,
   },
 ];
 
